@@ -44,11 +44,13 @@ echo "DefaultTimeoutStopSec=10s" >> /etc/systemd/system.conf
 timedatectl set-ntp false
 timedatectl set-timezone Europe/Prague
 
-cat >> /etc/chrony.conf <<EOF
-#czech NTP servers
-server ntp.nic.cz iburst iburst
-server tik.cesnet.cz iburst iburst
-server tak.cesnet.cz iburst iburst
+cat > /etc/chrony.conf <<EOF
+server ntp.nic.cz iburst
+server tik.cesnet.cz iburst
+server tak.cesnet.cz iburst
+driftfile /etc/chrony.drift
+rtconutc
+rtcsync
 EOF
 
 #SERVICES modifications
