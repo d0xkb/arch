@@ -53,5 +53,5 @@ rtcsync
 EOF
 
 #SERVICES modifications
-systemctl enable wicd
+systemctl enable wicd.service
 systemctl enable chrony.service
