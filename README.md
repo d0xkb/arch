@@ -1,3 +1,1 @@
-# arch
-aa
-bb
+# Arch Linux post installation script
