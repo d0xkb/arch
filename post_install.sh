@@ -47,6 +47,7 @@ server ntp.nic.cz prefer iburst
 server tik.cesnet.cz iburst
 server tak.cesnet.cz iburst
 driftfile /etc/chrony.drift
+makestep 5 3
 deny all
 rtconutc
 rtcsync
